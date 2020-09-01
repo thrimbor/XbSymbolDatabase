@@ -45,3 +45,23 @@ OOVPA_XREF(XoUpdateLaunchNewImageInternal, 5659, 11,
 
         { 0x79, 0xE8 },
 OOVPA_END;
+
+// ******************************************************************
+// * CXo::XOnlineMatchSearchGetResults
+// ******************************************************************
+OOVPA_XREF(CXo_XOnlineMatchSearchGetResults, 5659, 12,
+
+    XREF_CXo_XOnlineMatchSearchGetResults,
+    XRefZero)
+
+        // push ebp
+        // mov ebp, esp
+        // push ecx
+        // push ebx
+        // xor ebx, ebx
+        // cmp ecx, ebx
+        // jmp eip + $07h
+        // mov eax, ...
+        OV_MATCH(0x00, 0x55, 0x8B, 0xEC, 0x51, 0x53, 0x33, 0xDB, 0x3B, 0xCB, 0x75, 0x07, 0xB8),
+
+OOVPA_END;

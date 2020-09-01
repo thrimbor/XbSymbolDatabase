@@ -71,6 +71,8 @@ OOVPATable XONLINE_OOVPA[] = {
     REGISTER_OOVPAS(XOnlineMatchSearch, 4831),
     REGISTER_OOVPAS(XOnlineMatchSearchResultsLen_Body, 4831),
     REGISTER_OOVPAS(XOnlineMatchSearchResultsLen, 4831),
+    REGISTER_OOVPAS(CXo_XOnlineMatchSearchGetResults, 4831, 5659),
+    REGISTER_OOVPAS(XOnlineMatchSearchGetResults, 4831),
     REGISTER_OOVPAS(XoUpdateLaunchNewImageInternal, 4627, 5659, 5788),
 };
 
