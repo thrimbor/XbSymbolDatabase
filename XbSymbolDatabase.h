@@ -773,6 +773,7 @@ typedef enum _XRefDatabaseOffset
     // +s
     XREF_XoUpdateLaunchNewImageInternal,
     XREF_CXo_XOnlineLogon,
+    XREF_CXo_XOnlineMatchSearch,
 
     // XAPI
     XREF_XAPI_GetTypeInformation,
@@ -795,7 +796,7 @@ typedef enum _XRefDatabaseOffset
     XREF_JvsScReceiveRs323c_String,
     XREF_JvsScSendMidi_String,
     XREF_JvsScSendRs323c_String,
-    
+
     XREF_COUNT // XREF_COUNT must always be last.
     // Also, if XREF_COUNT > sizeof(uint16), enlarge struct OOVPA.XRefSaveIndex (and Value somehow)
 } XRefDatabaseOffset;
