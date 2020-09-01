@@ -88,3 +88,43 @@ OOVPA_XREF(XOnlineMatchSearch, 4831, 1+4,
         // jmp ...
         OV_MATCH(0x0A, 0xE9),
 OOVPA_END;
+
+// ******************************************************************
+// * XOnlineMatchSearchResultsLen_Body
+// ******************************************************************
+OOVPA_XREF(XOnlineMatchSearchResultsLen_Body, 4831, 14,
+
+    XREF_XOnlineMatchSearchResultsLen_Body,
+    XRefZero)
+
+        // test ecx, ecx
+        // jnz ...
+        OV_MATCH(0x00, 0x85, 0xC9, 0x75),
+
+        // mov eax, ...
+        OV_MATCH(0x04, 0xb8),
+        // jmp ...
+        OV_MATCH(0x09, 0xeb),
+        // push esi
+        // mov esi, dword ptr [esp + param_2]
+        // test esi, esi
+        // push 54h
+        OV_MATCH(0x0B, 0x56, 0x8b, 0x74, 0x24, 0x0c, 0x85, 0xf6, 0x6a, 0x54),
+OOVPA_END;
+
+// ******************************************************************
+// * XOnlineMatchSearchResultsLen
+// ******************************************************************
+OOVPA_XREF(XOnlineMatchSearchResultsLen, 4831, 1+3,
+
+    XRefNoSaveIndex,
+    XRefOne)
+
+        XREF_ENTRY(0x07, XREF_XOnlineMatchSearchResultsLen_Body),
+
+        // mov ecx, ...
+        OV_MATCH(0x00, 0x8B, 0x0D),
+
+        // jmp ...
+        OV_MATCH(0x06, 0xE9),
+OOVPA_END;
