@@ -14,6 +14,8 @@ source_group(TREE ${CMAKE_CURRENT_LIST_DIR} FILES ${SOURCES})
 
 add_library (XbSymbolDatabase ${SOURCES})
 add_executable (XbSymbolDatabaseTool main.c ${SOURCES})
+find_package (Threads)
+target_link_libraries (XbSymbolDatabaseTool Threads::Threads)
 
 set_target_properties(XbSymbolDatabase PROPERTIES
  C_STANDARD 11
