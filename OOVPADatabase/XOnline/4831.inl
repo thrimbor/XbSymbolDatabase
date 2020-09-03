@@ -213,3 +213,41 @@ OOVPA_XREF(XOnlineMatchSessionUpdate, 4831, 1+23,
         // push dword ptr [ebp + param_5]
         OV_MATCH(0x0C, 0xFF, 0x75, 0x28, 0xFF, 0x75, 0x24, 0xFF, 0x75, 0x20, 0xFF, 0x75, 0x1C, 0xFF, 0x75, 0x18),
 OOVPA_END;
+
+// ******************************************************************
+// * CXo::XOnlineMatchSessionCreate
+// ******************************************************************
+OOVPA_XREF(CXo_XOnlineMatchSessionCreate, 4831, 18,
+
+    XREF_CXo_XOnlineMatchSessionCreate,
+    XRefZero)
+
+        // push ebp
+        // mov ebp, esp
+        // push ecx
+        // push ecx
+        // xor eax, eax
+        // cmp ecx, eax
+        // jnz eip + $07h
+        // mov eax, $80150005h
+        // jmp eip + $55h
+        OV_MATCH(0x00, 0x55, 0x8B, 0xEC, 0x51, 0x51, 0x33, 0xC0, 0x3B, 0xC8, 0x75, 0x07, 0xB8, 0x05, 0x00, 0x15, 0x80, 0xEB, 0x55),
+OOVPA_END;
+
+// ******************************************************************
+// * XOnlineMatchSessionCreate
+// ******************************************************************
+OOVPA_XREF(XOnlineMatchSessionCreate, 4831, 1+4,
+
+    XRefNoSaveIndex,
+    XRefOne)
+
+        XREF_ENTRY(0x0B, XREF_CXo_XOnlineMatchSessionCreate),
+
+        // push ebp
+        // mov ebp, esp
+        OV_MATCH(0x00, 0x55, 0x8B, 0xEC),
+
+        // jmp ...
+        OV_MATCH(0x0A, 0xE9),
+OOVPA_END;
