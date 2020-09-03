@@ -65,3 +65,26 @@ OOVPA_XREF(CXo_XOnlineMatchSearchGetResults, 5659, 12,
         OV_MATCH(0x00, 0x55, 0x8B, 0xEC, 0x51, 0x53, 0x33, 0xDB, 0x3B, 0xCB, 0x75, 0x07, 0xB8),
 
 OOVPA_END;
+
+// ******************************************************************
+// * CXo::XOnlineMatchSessionUpdate
+// ******************************************************************
+OOVPA_XREF(CXo_XOnlineMatchSessionUpdate, 5659, 19,
+
+    XREF_CXo_XOnlineMatchSessionUpdate,
+    XRefZero)
+
+        // push ebp
+        // mov ebp, esp
+        // push esi
+        // mov esi, ecx
+        // test esi, esi
+        // jnz eip + $07h
+        OV_MATCH(0x00, 0x55, 0x8B, 0xEC, 0x56, 0x8B, 0xF1, 0x85, 0xF6, 0x75),
+
+        // push 0
+        // push dword ptr [ebp + param_2]
+        // mov ecx, esi
+        // push dword ptr [ebp + param_1]
+        OV_MATCH(0x11, 0x6a, 0x00, 0xFF, 0x75, 0x0C, 0x8B, 0xCE, 0xFF, 0x75, 0x08),
+OOVPA_END;
