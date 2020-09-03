@@ -5,6 +5,8 @@ cmake_minimum_required (VERSION 3.10.2)
 
 project (XbSymbolDatabase)
 
+add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
+
 file(GLOB_RECURSE SOURCES
  "XbSymbolDatabase.c"
  "OOVPADatabase/*.inl"
